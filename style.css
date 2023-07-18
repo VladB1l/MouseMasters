@@ -1,0 +1,314 @@
+body {
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------------header------------------------------------------------- */
+header {
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  transition: 0.2s;
+  background-color: transparent;
+  border-bottom: 1px solid;
+  border-bottom-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+header a {
+  color: white;
+}
+
+header img {
+  height: 60px;
+}
+
+#logo {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav ul {
+  display: flex;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-left: 10px;
+  padding: 10px;
+  border: 3px solid transparent;
+  transition: 1s;
+}
+
+.nav ul li:hover {
+  box-shadow: 0px 0px 15px 0px rgb(209, 205, 205);
+  border-radius: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 25px;
+  z-index: 1;
+  text-align: center;
+}
+
+.wrapper h1 {
+  margin-top: 150px;
+  cursor: pointer;
+}
+
+.wrapper h1::after {
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
+  background-size: 40px;
+}
+
+.wrapper h1.home::after {
+  background-image: url("./img/logo.png");
+}
+.wrapper h1.razer::after {
+  background-image: url("./img/Razer/Razer.png");
+}
+.wrapper h1.logitech::after {
+  background-image: url("./img/Logitech/logitech_logo.png");
+}
+.wrapper h1.xtrfy::after {
+  background-image: url("./img/Xtrfy/Xtrfy-Logo.png");
+}
+
+.wrapper h1 + p {
+  min-width: 630px;
+  width: 40%;
+  margin: auto;
+  line-height: 35px;
+}
+
+.img_home {
+  background: url("./img/main.avif");
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.55);
+  background-size: cover;
+  background-position-y: 400px;
+}
+
+.img_razer {
+  background: url("./img/Razer/Razer_con.webp");
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+
+.img_logitech {
+    background: url("./img/Logitech/Logitech_con.png");
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+  }
+
+  .img_xtrfy {
+    background: url("./img/Xtrfy/Xtrfy_con.jpg");
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position-y: -100px;
+  }
+
+/* -------------------------------------------------------------------------------main------------------------------------------------- */
+main {
+  padding: 30px;
+  margin: auto;
+  margin-top: 350px;
+  width: 80%;
+  font-size: 18px;
+}
+
+main a {
+  text-decoration: underline !important;
+}
+
+main h2 {
+  text-align: center;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: my-counter;
+  padding-left: 20px;
+}
+
+ol li {
+  counter-increment: my-counter;
+  margin-bottom: 5px;
+}
+
+ol li:before {
+  content: counter(my-counter) ")";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+table img {
+  width: 250px;
+  height: 200px;
+}
+
+.producer_table thead tr th:first-child {
+  border-radius: 20px 0 0 0;
+}
+
+.producer_table thead tr th:last-child {
+  border-radius: 0 20px 0 0;
+}
+
+.producer_table tbody tr:last-child td:first-child {
+  border-radius: 0 0 20px 20px;
+}
+
+.producer_table tbody {
+  opacity: 0.7;
+  text-align: right;
+}
+
+.mouse_list {
+  padding: 0;
+}
+
+.mouse_list ul {
+  list-style: circle;
+}
+
+.mouse_listItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 250px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.mouse_listItem a {
+  text-decoration: none;
+}
+
+.price {
+  position: absolute;
+  right: 55px;
+  bottom: 20px;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+dl img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+dt {
+  font-weight: 900;
+}
+
+dd {
+  text-align: justify;
+  padding: 10px;
+  border-left: 2px dotted black;
+}
+
+#top {
+  background-color: white;
+  cursor: pointer;
+  font-size: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border: 3px solid black;
+  padding: 5px 10px 5px 10px;
+}
+/* -------------------------------------------------------------------------------Hidden_div------------------------------------------------- */
+.hidden_div {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.hidden_div_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.hidden_div_body > div {
+    padding: 60px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.exercise {
+  cursor: pointer;
+  border: 3px solid black;
+  height: 20px;
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.exercise:hover {
+  background-color: white;
+  border-radius: 10px;
+}
+.close_btn{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
